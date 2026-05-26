@@ -78,3 +78,9 @@ def make_summary_placeholder(text: str, max_chars: int = 900) -> str:
         + summary
         + "\n\nFuture version: replace this with an LLM-generated historical research summary."
     )
+
+
+if __name__ == "__main__":
+    from app.streamlit_app import main
+
+    main()
