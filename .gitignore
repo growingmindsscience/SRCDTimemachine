@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+.pycache/
+*.py[cod]
+.DS_Store
+
+# Local archive data
+data/srcd_archive.db
+data/uploads/*
+data/texts/*
+!data/uploads/.gitkeep
+!data/texts/.gitkeep
+
+# Local packaged builds
+*.zip
