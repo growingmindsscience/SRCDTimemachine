@@ -5,8 +5,12 @@ from pathlib import Path
 
 import streamlit as st
 
-from db import add_manuscript, get_manuscript, init_db, list_manuscripts, search_manuscripts
-from pdf_processing import extract_or_ocr_pdf, make_summary_placeholder
+try:
+    from app.db import add_manuscript, get_manuscript, init_db, list_manuscripts, search_manuscripts
+    from app.pdf_processing import extract_or_ocr_pdf, make_summary_placeholder
+except ModuleNotFoundError:
+    from db import add_manuscript, get_manuscript, init_db, list_manuscripts, search_manuscripts
+    from pdf_processing import extract_or_ocr_pdf, make_summary_placeholder
 
 
 BASE_DIR = Path(__file__).resolve().parent.parent
